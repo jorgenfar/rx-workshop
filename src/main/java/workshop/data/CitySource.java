@@ -3,7 +3,7 @@ package workshop.data;
 import io.reactivex.Observable;
 import workshop.dto.City;
 
-public class CityRepository {
+public class CitySource {
 
     public static final int OSLO_POPULATION = 958378;
     public static final int STAVANGER_POPULATION = 220943;
