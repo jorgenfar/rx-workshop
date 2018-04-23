@@ -1,4 +1,4 @@
-package workshop;
+package workshop.example;
 
 import io.reactivex.Completable;
 import io.reactivex.Observable;
