@@ -4,7 +4,6 @@ import io.reactivex.Observable;
 import io.reactivex.Single;
 import workshop.data.CitySource;
 import workshop.data.TemperatureSource;
-import workshop.dto.City;
 
 class Main {
 
@@ -17,45 +16,30 @@ class Main {
     }
 
     Single<String> getTheFirstCityName() {
-        return citySource.getCities()
-                .firstOrError()
-                .map(city -> city.name);
+        throw new RuntimeException("Not implemented yet");
     }
 
     Single<String> getTheLastCityName() {
-        return citySource.getCities()
-                .lastOrError()
-                .map(city -> city.name);
+        throw new RuntimeException("Not implemented yet");
     }
 
     Observable<Integer> getTheFirstTwoCityIds() {
-        return citySource.getCities()
-                .take(2)
-                .map(city -> city.id);
+        throw new RuntimeException("Not implemented yet");
     }
 
     Observable<Integer> getCitiesWithNamesContaining(String letter) {
-        return citySource.getCities()
-                .filter(city -> city.name.toLowerCase().contains(letter))
-                .map(city -> city.id);
+        throw new RuntimeException("Not implemented yet");
     }
 
     Single<Integer> getTotalPopulation() {
-        return citySource.getCities()
-                .map(city -> city.population)
-                .reduce((integer, integer2) -> integer + integer2)
-                .toSingle();
+        throw new RuntimeException("Not implemented yet");
     }
 
     Observable<Double> getTemperatureForCity(int cityId) {
-        return citySource.getCities()
-                .filter(city -> city.id == cityId)
-                .flatMap((City city) -> temperatureSource.getTemperature(city.id));
+        throw new RuntimeException("Not implemented yet");
     }
 
     Observable<Double> getTemperatureDifferanceBetweenCities(int cityIdA, int cityIdB) {
-        final Observable<Double> a = temperatureSource.getTemperature(cityIdA);
-        final Observable<Double> b = temperatureSource.getTemperature(cityIdB);
-        return a.zipWith(b, (tempA, tempB) -> Math.abs(tempA - tempB));
+        throw new RuntimeException("Not implemented yet");
     }
 }
